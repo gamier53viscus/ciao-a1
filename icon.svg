@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <!-- App-Icon «Ciao!»: Sprechblase, Schriftzug aus Linien gezeichnet (keine Schriftart nötig) -->
-  <rect width="512" height="512" fill="#c0392b"/>
-  <rect x="48" y="108" width="416" height="224" rx="56" fill="#faf8f4"/>
-  <path d="M112 320 L96 404 L196 324 Z" fill="#faf8f4"/>
-  <g fill="none" stroke="#c0392b" stroke-width="22" stroke-linecap="round">
+  <rect width="512" height="512" fill="#4F716C"/>
+  <rect x="48" y="108" width="416" height="224" rx="56" fill="#F7F5F1"/>
+  <path d="M112 320 L96 404 L196 324 Z" fill="#F7F5F1"/>
+  <g fill="none" stroke="#4F716C" stroke-width="22" stroke-linecap="round">
     <path d="M170.1 188.9 A44 44 0 1 0 170.1 251.1"/>
     <path d="M204 208 V264"/>
     <circle cx="266" cy="236" r="28"/>
@@ -11,7 +11,7 @@
     <circle cx="356" cy="236" r="28"/>
     <path d="M418 176 V230"/>
   </g>
-  <g fill="#c0392b">
+  <g fill="#4F716C">
     <circle cx="204" cy="178" r="13"/>
     <circle cx="418" cy="262" r="12"/>
   </g>
