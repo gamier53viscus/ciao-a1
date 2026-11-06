@@ -1,10 +1,12 @@
-/* Ciao! Italiano A1 – App-Logik (Vanilla JS, kein Build) */
+/* Donnola – Italiano A1: App-Logik (Vanilla JS, kein Build) */
 (function(){
 "use strict";
 
 /* ---------- Hilfsfunktionen ---------- */
 const $=id=>document.getElementById(id);
 const view=$("view");
+// Wortmarke (Wiesel + «donnola») aus der Kopfzeile in index.html; die Startseite zeigt sie gross
+const BRAND=document.querySelector("header .brand").innerHTML;
 const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
 const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const pad=n=>String(n).padStart(2,"0");
@@ -122,7 +124,7 @@ ROUTES.home=function(){
  const nv=next?vocabOfLesson(next.id):[],nk=nv.filter(v=>(S.cards[v.k]||{}).box>=3).length,np=nv.length?Math.round(100*nk/nv.length):0;
  const item=(attr,ic,t,s)=>`<button class="plan-i" ${attr}><span class="ico">${ic}</span><span><b>${t}</b><span class="mut">${s}</span></span></button>`;
  view.innerHTML=`
- <div class="hello"><div><p class="greet">Buongiorno, Leandra.</p><h2 class="apptitle">Ciao! Italiano A1</h2></div><div class="streak" title="Serie: Tage mit Antworten in Folge"><b>${streak}</b><span>${streak===1?"Tag":"Tage"}</span></div></div>
+ <div class="hello"><div><p class="greet">Buongiorno, Leandra.</p><h2 class="brand brand-l" aria-label="Donnola – Italiano A1">${BRAND}</h2></div><div class="streak" title="Serie: Tage mit Antworten in Folge"><b>${streak}</b><span>${streak===1?"Tag":"Tage"}</span></div></div>
  ${next?`<div class="card hero click" id="nextL"><div class="hero-k">Weiter lernen</div><div class="hero-t">Lektion ${next.id} · ${esc(next.title)}</div><div class="hero-s">${esc(next.sub)}</div><div class="hero-p"><div class="bar"><i style="width:${np}%"></i></div><span>${nk} / ${nv.length} Wörter</span></div><button class="btn light">Fortsetzen</button></div>`:`<div class="card hero"><div class="hero-k">Alle Lektionen abgeschlossen</div><div class="hero-t">Jetzt Simulationen und Wiederholung</div></div>`}
  <div class="grid">
   <div class="card"><div class="num">${doneN}/${L.length}</div><div class="mut">Lektionen abgeschlossen</div></div>

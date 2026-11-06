@@ -1,4 +1,4 @@
-# Ciao! Italiano A1
+# Donnola – Italiano A1
 
 Lern-Webapp für die Italienisch-A1-Prüfung. Kein Build, kein Server: `index.html` per Doppelklick öffnen.
 Fortschritt wird im Browser (localStorage) gespeichert.
@@ -9,7 +9,8 @@ Fortschritt wird im Browser (localStorage) gespeichert.
 - `app.js` – Logik (Lektionen, Karten/Leitner, Quiz mit Schwächen-Training, Diktat, Schreiben, Sprechen, Prüfungssimulation mit Zeitlimit)
 - `data-lezioni-1.js`, `data-lezioni-2.js`, `data-lezioni-3.js` – 13 Lektionen (Grammatik, Wortschatz, Übungen, Lesen, Hören, Schreiben, Sprechen); Lektion 13 «Salute e corpo» ist ein A1-Nachtrag
 - `data-esami.js` – 4 Prüfungssimulationen (1–3 CILS-Aufbau, 4 PLIDA A1) und Prüfungsinfos zu PLIDA
-- `manifest.json`, `icon.svg`, `icon-192.png`, `icon-512.png` – Web-App-Manifest und Icon, damit sich die App auf dem Handy installieren lässt
+- `manifest.json`, `favicon.svg`, `favicon.ico`, `icon-192.png`, `icon-512.png`, `apple-touch-icon.png` – Web-App-Manifest und App-Icon (Wiesel), damit sich die App auf dem Handy installieren lässt
+- `assets/donnola.svg` – das Wiesel, Vorlage für Icon und Wortmarke
 - `.nojekyll` – GitHub Pages liefert die Dateien unverändert aus
 
 ## Inhalt

@@ -1,4 +1,4 @@
-# Lehrplan Italiano A1 (Stand 04.11.2026)
+# Lehrplan Donnola – Italiano A1 (Stand 06.11.2026)
 
 ## Zielprüfung: PLIDA A1 (verifiziert auf plida.dante.global, 03.11.2026)
 - Prüfungsort St. Gallen, langfristig B1 Cittadinanza (auf plida.dante.global nicht dokumentiert).

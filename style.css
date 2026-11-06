@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap");
 /* Eukalyptus, Greige, Messing. Kontraste für Text ≥ 4.5:1; --bad-ink ist das dunklere Terrakotta für Text auf --bad-tint */
-:root{--bg:#F7F5F1;--card:#FFFFFF;--ink:#2B2B28;--mut:#6B6963;--line:#E6E1D9;--soft:#F1EEE9;--acc:#4F716C;--acc-dark:#3E5C58;--acc-tint:#E6ECEA;--on-acc:#FFFFFF;--brass:#C9A96E;--brass-tint:#F1EAE0;--brass-ink:#5C4A2E;--bad:#9C4A3C;--bad-tint:#E4CFC9;--bad-ink:#87402F;--good:#4F716C;--shadow:0 4px 14px rgba(79,113,108,.18);--serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-@media(prefers-color-scheme:dark){:root{--bg:#1E1E1C;--card:#282825;--ink:#EDEAE4;--mut:#A39F96;--line:#3A3934;--soft:#2F2E2A;--acc:#7FA39D;--acc-dark:#A9C6C0;--acc-tint:#2E3B39;--on-acc:#1E1E1C;--brass:#D4B57C;--brass-tint:#3A3328;--brass-ink:#E6D2A8;--bad:#E39A8B;--bad-tint:#4A2E29;--bad-ink:#E39A8B;--good:#7FA39D;--shadow:0 4px 14px rgba(0,0,0,.35)}}
+:root{--bg:#F7F5F1;--card:#FFFFFF;--ink:#2B2B28;--mut:#6B6963;--line:#E6E1D9;--soft:#F1EEE9;--acc:#4F716C;--acc-dark:#3E5C58;--acc-tint:#E6ECEA;--on-acc:#FFFFFF;--brass:#C9A96E;--brass-tint:#F1EAE0;--brass-ink:#5C4A2E;--bad:#9C4A3C;--bad-tint:#E4CFC9;--bad-ink:#87402F;--good:#4F716C;--shadow:0 4px 14px rgba(79,113,108,.18);--serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;--weasel:#5B6B5E}
+@media(prefers-color-scheme:dark){:root{--bg:#1E1E1C;--card:#282825;--ink:#EDEAE4;--mut:#A39F96;--line:#3A3934;--soft:#2F2E2A;--acc:#7FA39D;--acc-dark:#A9C6C0;--acc-tint:#2E3B39;--on-acc:#1E1E1C;--brass:#D4B57C;--brass-tint:#3A3328;--brass-ink:#E6D2A8;--bad:#E39A8B;--bad-tint:#4A2E29;--bad-ink:#E39A8B;--good:#7FA39D;--shadow:0 4px 14px rgba(0,0,0,.35);--weasel:#A8B5AA}}
 
 /* Grundlage */
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
 b,strong,th{font-weight:600}
 a{color:var(--acc)}
-h1,h2,.apptitle,.ltitle,.big,.gram h3,.hero-t,.num{font-family:var(--serif);font-weight:600;font-variant-numeric:lining-nums}
+h1,h2,.ltitle,.big,.gram h3,.hero-t,.num{font-family:var(--serif);font-weight:600;font-variant-numeric:lining-nums}
 h1{font-size:22px;margin:12px 0 0}
 h2{font-size:28px;line-height:1.15;margin:4px 0 10px}
 h3{font-size:16px;font-weight:600;margin:20px 0 8px}
@@ -20,6 +20,17 @@ h3{font-size:16px;font-weight:600;margin:20px 0 8px}
 header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
 [data-view="home"] header h1{display:none}
+/* Wortmarke: Wiesel inline, Körperfarbe per Variable (dunkel heller), Bauch bleibt weiss */
+.brand{display:flex;align-items:center;gap:8px;margin:10px 0 0}
+.weasel{flex:none;height:28px;width:auto;aspect-ratio:5/6}
+.weasel [fill="#5B6B5E"]{fill:var(--weasel)}
+.weasel [stroke="#5B6B5E"]{stroke:var(--weasel)}
+.brand-t{display:flex;flex-direction:column;gap:3px}
+.brand-n{font:700 24px/.9 var(--serif);color:var(--ink)}
+.brand-s{font:600 11px/1 var(--sans);letter-spacing:1.5px;text-transform:uppercase;color:var(--acc)}
+.brand-l{gap:12px;margin:2px 0 0}
+.brand-l .weasel{height:44px}
+.brand-l .brand-n{font-size:34px}
 nav,.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
 nav::-webkit-scrollbar,.tabs::-webkit-scrollbar{display:none}
 nav{padding:10px 0 12px}
@@ -83,7 +94,6 @@ input[type=text]:focus,textarea:focus{outline:2px solid var(--acc);outline-offse
 /* Startseite */
 .hello{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:4px 0 20px}
 .greet{margin:0;color:var(--mut);font-size:15px}
-.apptitle{font-size:34px;line-height:1.1;margin:2px 0 0}
 .streak{flex:none;min-width:62px;padding:8px 10px;border-radius:14px;background:var(--brass);color:#24231F;text-align:center;line-height:1.1}
 .streak b{display:block;font-size:22px}
 .streak span{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
