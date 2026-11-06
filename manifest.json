@@ -1,0 +1,16 @@
+{
+  "name": "Ciao! Italiano A1",
+  "short_name": "Ciao A1",
+  "description": "Italienisch A1 lernen und die PLIDA-A1-Prüfung üben",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf8f4",
+  "theme_color": "#faf8f4",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
